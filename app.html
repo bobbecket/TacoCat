@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>App Name: A Coding Project By Robert Becket</title>
+    <title>TACOCAT: A Coding Project By Robert Becket</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -23,7 +23,7 @@
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"><img src="img/favicon-32x32.png" class="d-linline-block align-text-top">
-                APP NAME</a>
+                TACOCAT</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -52,7 +52,38 @@
 
     <!-- ==== Main Section ==== -->
     <main class="flex-shrink-0">
-        <div class="container"></div>
+        <div class="container mt-5">
+            <div class="row row-cols-1 row-cols-lg-2">
+                <div class="col">
+                    <h1 class="display-5 fw-bold lh-1 mb-3">TACOCAT: A Coding Project</h1>
+                    <h4 class="lead">TACOCAT: the palindromic kitty! "tacocat" is a palindrome. A palindrome is a word,
+                        phrase or sequence that reads the same backward as forward. Write a program that checks if the
+                        phrase entered is a palindrome.
+                    </h4>
+                </div>
+                <div class="col">
+                    <h5 class="border-1 border-bottom border-danger">
+                        Enter a Phrase or Word to Check
+                    </h5>
+                    <form class="row gx-3 gy-2">
+                        <div class="col">
+                            <input id="userString" type="text" class="form-control" placeholder="Enter a String"
+                                aria-label="Enter a String">
+                        </div>
+                        <div class="col-12">
+                            <button type="button" id="btnSubmit" class="btn btn-dark">Check It</button>
+                        </div>
+                        <div class="alert alert-danger mt-5 invisible fade show" id="alert" role="alert">
+                            <h4 class="alert-heading" id="alertHeader"></h4>
+                            <hr>
+                            <p class="mb-0" id="msg">
+                                <!--Insert a Message Here-->
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </main>
 
     <!-- ==== Footer Section ==== -->
@@ -63,7 +94,7 @@
                     <div><span class="text-muted">&copy;2021</span> Robert Becket | robert@robertbecket.com</div>
                 </div>
                 <div class="col d-flex align-items-center justify-content-start justify-content-lg-center">
-                    <img src="img/rb-logo.png" alt="Robert Becket Logo" height="24">
+                    <img src="img/rb-logo.png" alt="Robert Becket Logo">
                 </div>
                 <div class="col align-items-center d-flex justify-content-start justify-content-lg-end">
                     <div class="row ">
@@ -86,6 +117,9 @@
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
     </script>
     <script src="js/site.js"></script>
+    <script>
+        document.getElementById("btnSubmit").addEventListener("click", getValue);
+    </script>
 </body>
 
 </html>
